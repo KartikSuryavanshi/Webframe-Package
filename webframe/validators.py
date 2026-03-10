@@ -27,6 +27,7 @@ def validate_url(url: str) -> bool:
         return False
 
     try:
+        # Parse URL and check for required components (scheme and netloc)
         result = urlparse(url)
         return all([result.scheme, result.netloc])
     except Exception:
@@ -85,6 +86,7 @@ def extract_youtube_id(url: str) -> Optional[str]:
         return None
 
     # Pattern 1: youtube.com/watch?v=VIDEO_ID
+    # Matches standard YouTube watch URLs
     pattern1 = r'(?:youtube\.com\/watch\?v=)([\w-]+)'
     match = re.search(pattern1, url)
     if match:
