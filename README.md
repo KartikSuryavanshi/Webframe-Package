@@ -205,17 +205,6 @@ tox
 - Python 3.7+
 - IPython 7.0.0+
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests and linting (`pytest && flake8 webframe tests`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
 
 ### Development Setup
 
@@ -240,27 +229,7 @@ black --check webframe tests
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Built with [IPython](https://ipython.org/) display tools
-- Designed for [Jupyter Notebook](https://jupyter.org/) and [Google Colab](https://colab.research.google.com/)
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-- 🐛 [Report a Bug](https://github.com/yourusername/webframe/issues)
-- 💡 [Request a Feature](https://github.com/yourusername/webframe/issues)
-- 📖 [Read the Docs](https://github.com/yourusername/webframe#readme)
-
-## 🗺️ Roadmap
-
-- [ ] Support for more video platforms (Vimeo, Dailymotion)
-- [ ] PDF embedding support
-- [ ] Interactive widget support
-- [ ] Caching mechanisms
-- [ ] Custom CSS styling options
 
 ---
 
-Made with ❤️ by WebFrame Contributors
+Made with ❤️
