@@ -29,13 +29,13 @@ def get_logger(
     """
     logger = logging.getLogger(name)
 
-    # Avoid adding handlers multiple times
+    # Avoid adding handlers multiple times if logger already configured
     if logger.handlers:
         return logger
 
     logger.setLevel(level)
 
-    # Create console handler
+    # Create console handler with specified level
     handler = logging.StreamHandler(sys.stdout)
     handler.setLevel(level)
 
