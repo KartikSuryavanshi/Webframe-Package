@@ -45,12 +45,12 @@ def render_site(
     # Validate URL format
     if not validate_url(url):
         logger.error(f"Invalid URL format: {url}")
-        raise InvalidURLError(f"Invalid URL format: {url}")
+        raise InvalidURLError(f"Invalid URL format: {url}. Please provide a valid URL.")
 
     # Validate HTTPS if enforced
     if enforce_https and not validate_https(url):
         logger.error(f"URL must use HTTPS: {url}")
-        raise InvalidURLError(f"URL must use HTTPS: {url}")
+        raise InvalidURLError(f"URL must use HTTPS: {url}. Use enforce_https=False to allow HTTP.")
 
     # Validate dimensions
     if width <= 0 or height <= 0:
