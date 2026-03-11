@@ -8,6 +8,7 @@ To run this in a Jupyter notebook:
 1. Install the package: pip install -e .
 2. Create a new Jupyter notebook
 3. Copy these code cells into your notebook
+4. Run each cell to see the embedded content
 """
 
 # Cell 1: Import the library
