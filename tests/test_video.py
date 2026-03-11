@@ -1,5 +1,8 @@
 """
 Unit tests for the video rendering module.
+
+Tests cover YouTube URL parsing, video ID extraction,
+player customization, and HTML iframe generation.
 """
 
 import pytest

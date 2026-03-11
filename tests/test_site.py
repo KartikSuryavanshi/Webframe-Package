@@ -1,5 +1,8 @@
 """
 Unit tests for the site rendering module.
+
+Tests cover URL validation, HTTPS enforcement, dimension validation,
+and IFrame rendering functionality.
 """
 
 import pytest
