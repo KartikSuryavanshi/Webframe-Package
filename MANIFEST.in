@@ -1,3 +1,4 @@
+# Include documentation and configuration files in source distributions
 include README.md
 include LICENSE
 include pyproject.toml
@@ -5,7 +6,11 @@ include setup.cfg
 include tox.ini
 include .flake8
 include mypy.ini
+
+# Include all Python source files
 recursive-include webframe *.py
 recursive-include tests *.py
+
+# Exclude compiled Python files and caches
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
