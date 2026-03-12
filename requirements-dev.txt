@@ -1,16 +1,17 @@
-# Development dependencies
+# Development dependencies for WebFrame
+# Include all production dependencies
 -r requirements.txt
 
-# Testing
+# Testing frameworks
 pytest>=7.0.0
 pytest-cov>=4.0.0
 
-# Code quality
+# Code quality and linting tools
 flake8>=6.0.0
 mypy>=1.0.0
 black>=23.0.0
 
-# Build and packaging
+# Build and packaging tools
 tox>=4.0.0
 build>=0.10.0
 twine>=4.0.0
