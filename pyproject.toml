@@ -44,10 +44,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/webframe"
-Documentation = "https://github.com/yourusername/webframe#readme"
-Repository = "https://github.com/yourusername/webframe"
-"Bug Tracker" = "https://github.com/yourusername/webframe/issues"
+Homepage = "https://github.com/KartikSuryavanshi/Webframe-Package"
+Documentation = "https://github.com/KartikSuryavanshi/Webframe-Package#readme"
+Repository = "https://github.com/KartikSuryavanshi/Webframe-Package"
+"Bug Tracker" = "https://github.com/KartikSuryavanshi/Webframe-Package/issues"
 
 [tool.setuptools]
 packages = ["webframe"]
