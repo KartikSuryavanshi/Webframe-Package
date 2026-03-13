@@ -1,4 +1,4 @@
-# WebFrame
+# kartik-webframe
 
 [![Tests](https://github.com/KartikSuryavanshi/Webframe-Package/actions/workflows/tests.yml/badge.svg)](https://github.com/KartikSuryavanshi/Webframe-Package/actions/workflows/tests.yml)
 [![PyPI version](https://badge.fury.io/py/kartik-webframe.svg)](https://badge.fury.io/py/kartik-webframe)
@@ -6,6 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple Python library to embed websites and YouTube videos in Jupyter notebooks.
+
+**📦 PyPI:** https://pypi.org/project/kartik-webframe/
 
 ## Why?
 
@@ -26,6 +28,22 @@ pip install -e .
 ```
 
 ## Usage
+
+### Quick Start
+
+```python
+# Install the package
+# pip install kartik-webframe
+
+# Import and use
+from webframe import render_site, render_youtube_video
+
+# Render a website
+render_site("https://docs.python.org")
+
+# Render a YouTube video
+render_youtube_video("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+```
 
 ### Embed a Website
 
@@ -58,14 +76,26 @@ Uses IPython's display functionality to render IFrames for websites and HTML emb
 ## Requirements
 
 - Python 3.7+
-- IPython
+- IPython ≥ 7.0.0
 
-## Testing
+## Development
+
+### Running Tests
 
 ```bash
 pytest
 ```
 
+### Building Package
+
+```bash
+python -m build
+```
+
 ## License
 
-MIT
+MIT - Copyright (c) 2026 Kartik Suryavanshi
+
+---
+
+**Made with ❤️ for the Jupyter community**
