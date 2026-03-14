@@ -98,4 +98,4 @@ MIT - Copyright (c) 2026 Kartik Suryavanshi
 
 ---
 
-**Made with ❤️ for the Jupyter community**
+**Made with ❤️**
