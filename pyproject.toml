@@ -42,4 +42,4 @@ packages = ["webframe"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = ["--verbose", "--cov=webframe"]
+addopts = ["--verbose"]

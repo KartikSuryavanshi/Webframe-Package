@@ -1,12 +1,7 @@
-"""
-Unit tests for the video rendering module.
-
-Tests cover YouTube URL parsing, video ID extraction,
-player customization, and HTML iframe generation.
-"""
+"""Tests for YouTube video rendering."""
 
 import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from IPython.display import HTML
 
 from webframe.video import render_youtube_video
@@ -14,11 +9,9 @@ from webframe.exceptions import InvalidYouTubeURLError
 
 
 class TestRenderYouTubeVideo:
-    """Test cases for render_youtube_video function."""
 
     @patch('webframe.video.display')
     def test_render_youtube_video_standard_url(self, mock_display):
-        """Test rendering a standard YouTube URL."""
         url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         result = render_youtube_video(url)
 
@@ -29,7 +22,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_short_url(self, mock_display):
-        """Test rendering a shortened youtu.be URL."""
         url = "https://youtu.be/dQw4w9WgXcQ"
         result = render_youtube_video(url)
 
@@ -39,7 +31,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_custom_dimensions(self, mock_display):
-        """Test rendering with custom width and height."""
         url = "https://www.youtube.com/watch?v=rfscVS0vtbw"
         width = 1000
         height = 600
@@ -52,7 +43,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_with_autoplay(self, mock_display):
-        """Test rendering with autoplay enabled."""
         url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         result = render_youtube_video(url, autoplay=True)
 
@@ -62,7 +52,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_with_mute(self, mock_display):
-        """Test rendering with mute enabled."""
         url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         result = render_youtube_video(url, mute=True)
 
@@ -72,7 +61,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_with_autoplay_and_mute(self, mock_display):
-        """Test rendering with both autoplay and mute enabled."""
         url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         result = render_youtube_video(url, autoplay=True, mute=True)
 
@@ -83,7 +71,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_invalid_url(self, mock_display):
-        """Test that invalid YouTube URLs raise an error."""
         url = "https://example.com/not-youtube"
 
         with pytest.raises(InvalidYouTubeURLError) as exc_info:
@@ -94,7 +81,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_invalid_dimensions(self, mock_display):
-        """Test that invalid dimensions raise an error."""
         url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
         with pytest.raises(ValueError):
@@ -107,7 +93,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_empty_url(self, mock_display):
-        """Test that empty URLs are rejected."""
         url = ""
 
         with pytest.raises(InvalidYouTubeURLError):
@@ -117,7 +102,6 @@ class TestRenderYouTubeVideo:
 
     @patch('webframe.video.display')
     def test_render_youtube_video_embed_url(self, mock_display):
-        """Test rendering a YouTube embed URL."""
         url = "https://www.youtube.com/embed/dQw4w9WgXcQ"
         result = render_youtube_video(url)
 

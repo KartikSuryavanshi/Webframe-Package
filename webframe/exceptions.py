@@ -1,6 +1,4 @@
-"""
-Custom exceptions for WebFrame package.
-"""
+"""Custom exceptions."""
 
 
 class WebFrameError(Exception):

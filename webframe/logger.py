@@ -1,32 +1,11 @@
-"""
-Logging configuration for WebFrame package.
-"""
+"""Simple logging setup."""
 
 import logging
 import sys
-from typing import Optional
 
 
-def get_logger(
-    name: str,
-    level: int = logging.INFO,
-    format_string: Optional[str] = None
-) -> logging.Logger:
-    """
-    Get a configured logger instance.
-
-    Args:
-        name: Name of the logger (typically __name__ from calling module)
-        level: Logging level (default: logging.INFO)
-        format_string: Custom format string for log messages
-
-    Returns:
-        logging.Logger: Configured logger instance
-
-    Example:
-        >>> logger = get_logger(__name__)
-        >>> logger.info("This is an info message")
-    """
+def get_logger(name, level=logging.INFO, format_string=None):
+    """Get a configured logger."""
     logger = logging.getLogger(name)
 
     # Avoid adding handlers multiple times if logger already configured

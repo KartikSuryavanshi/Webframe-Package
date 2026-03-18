@@ -1,11 +1,5 @@
-"""
-Video rendering module for WebFrame.
+"""YouTube video embedding for Jupyter notebooks."""
 
-This module provides functionality to embed YouTube videos
-inside Jupyter Notebook cells using HTML iframe.
-"""
-
-from typing import Optional
 from IPython.display import HTML, display
 
 from webframe.validators import extract_youtube_id
@@ -15,32 +9,11 @@ from webframe.exceptions import InvalidYouTubeURLError
 logger = get_logger(__name__)
 
 
-def render_youtube_video(
-    url: str,
-    width: int = 800,
-    height: int = 450,
-    autoplay: bool = False,
-    mute: bool = False
-) -> HTML:
-    """
-    Render a YouTube video inside a Jupyter Notebook cell.
+def render_youtube_video(url, width=800, height=450,
+                         autoplay=False, mute=False):
+    """Embed a YouTube video in Jupyter.
 
-    Args:
-        url: The YouTube video URL
-        width: Width of the video player in pixels (default: 800)
-        height: Height of the video player in pixels (default: 450)
-        autoplay: Whether to autoplay the video (default: False)
-        mute: Whether to mute the video (default: False)
-
-    Returns:
-        HTML: An IPython HTML object containing the embedded video
-
-    Raises:
-        InvalidYouTubeURLError: If the YouTube URL is invalid
-
-    Example:
-        >>> from webframe import render_youtube_video
-        >>> render_youtube_video("https://www.youtube.com/watch?v=rfscVS0vtbw")
+    Supports youtube.com/watch, youtu.be, and embed URLs.
     """
     logger.info(f"Attempting to render YouTube video: {url}")
 
@@ -69,6 +42,7 @@ def render_youtube_video(
 
     logger.info(f"Successfully rendering video: {video_id} ({width}x{height})")
 
+    # TODO: maybe add support for start time parameter (t=30s)
     # Create iframe HTML
     iframe_html = f"""
     <iframe
@@ -76,7 +50,8 @@ def render_youtube_video(
         height="{height}"
         src="{embed_url}"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; clipboard-write;
+               encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
     </iframe>
     """
