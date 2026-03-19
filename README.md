@@ -69,7 +69,7 @@ render_youtube_video("https://youtu.be/VIDEO_ID")
 render_youtube_video("https://youtu.be/VIDEO_ID", width=1000, height=600, autoplay=True, mute=True)
 ```
 
-## How It Works
+## How It Works?
 
 Uses IPython's display functionality to render IFrames for websites and HTML embeds for YouTube videos. Only works in Jupyter notebooks or Google Colab.
 
