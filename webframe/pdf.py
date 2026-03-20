@@ -7,6 +7,9 @@ from webframe.validators import validate_url
 logger = get_logger(__name__)
 
 def render_pdf(url, width=900, height=600):
+    
+    
+def render_pdf(url, width=900, height=600):
     """Embed a PDF or Google Doc in a Jupyter notebook cell.
 
     Args:
