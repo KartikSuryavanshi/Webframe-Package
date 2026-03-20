@@ -1,3 +1,1 @@
-# Core dependencies for WebFrame package
-# IPython is required for IFrame and HTML display objects
-ipython>=7.0.0
+
