@@ -2,7 +2,6 @@
 
 from IPython.display import IFrame, display, HTML
 from webframe.logger import get_logger
-from webframe.exceptions import InvalidURLError
 from webframe.validators import validate_url
 
 logger = get_logger(__name__)

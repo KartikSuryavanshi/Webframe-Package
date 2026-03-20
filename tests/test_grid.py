@@ -1,9 +1,10 @@
 """Tests for grid layout embedding."""
 
 from webframe.grid import render_grid
-from IPython.display import HTML
+from unittest.mock import patch
 from unittest.mock import patch
 
+  
 class TestRenderGrid:
     @patch('webframe.grid.display')
     def test_render_grid_valid_urls(self, mock_display):
