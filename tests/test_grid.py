@@ -1,9 +1,7 @@
 """Tests for grid layout embedding."""
-*** End Patch
 from webframe.grid import render_grid
 from unittest.mock import patch
 
-    
 class TestRenderGrid:
     @patch('webframe.grid.display')
     def test_render_grid_valid_urls(self, mock_display):
