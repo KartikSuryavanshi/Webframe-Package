@@ -123,6 +123,4 @@ python -m build
 
 MIT - Copyright (c) 2026 Kartik Suryavanshi
 
----
 
-**Made with ❤️**
