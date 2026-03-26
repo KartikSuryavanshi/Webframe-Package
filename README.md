@@ -96,7 +96,7 @@ render_grid([
 ], ncols=2)
 ```
 
-## How It Works
+## How It Works?
 
 Uses IPython's display functionality to render IFrames for websites and HTML embeds for YouTube videos. Only works in Jupyter notebooks or Google Colab.
 
