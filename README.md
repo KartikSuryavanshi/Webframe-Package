@@ -119,8 +119,4 @@ pytest
 python -m build
 ```
 
-## License
-
-MIT - Copyright (c) 2026 Kartik Suryavanshi
-
 
