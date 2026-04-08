@@ -7,7 +7,7 @@
 
 A simple Python library to embed websites and YouTube videos in Jupyter notebooks.
 
-**📦 PyPI:** https://pypi.org/project/kartik-webframe/
+**PyPI:** https://pypi.org/project/kartik-webframe/
 
 ## What's New (v0.2.0)
 
