@@ -15,7 +15,7 @@ A simple Python library to embed websites and YouTube videos in Jupyter notebook
 - Grid layout for multiple embeds: `render_grid(urls, ncols=2)`
 - 100% test coverage, improved error handling, and more natural code style
 
-## Why?
+## Why
 
 When working in Jupyter notebooks, I got tired of switching between browser tabs to check documentation or watch tutorials. This library lets you view websites and videos right inside your notebook cells.
 
